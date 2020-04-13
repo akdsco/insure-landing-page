@@ -24,8 +24,8 @@ const img = () => src('./src/img/*')
   .pipe(dest('./build/img/'));
 
 const js = () => src(['node_modules/babel-polyfill/dist/polyfill.js', './src/js/**.js'])
-  .pipe(babel({presets: ["@babel/preset-env"]}))
-  .pipe(uglify())
+  // .pipe(babel({presets: ["@babel/preset-env"]}))
+  // .pipe(uglify())
   .pipe(dest('./build/js/'));
 
 const watchChange = () => {

@@ -1,0 +1,18 @@
+.btn {
+  border-width: 2px;
+  border-style: solid;
+  padding: 11px;
+}
+
+.btn-primary {
+  border-color: $neutral-very-dark-violet;
+}
+
+.btn-secondary {
+  border-color: white;
+
+  &:hover {
+    background-color: white;
+    color: $neutral-very-dark-violet;
+  }
+}
