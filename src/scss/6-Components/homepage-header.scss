@@ -4,10 +4,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    max-width: $design-width-desktop;
   }
 
   &--logo {
-    margin: 1.75rem;
+    margin: 1.75rem 1.75rem 1.75rem 7%;
     order: 1;
     a {
       position: relative;
@@ -19,17 +20,12 @@
     width: 100%;
     order: 2;
     display: none;
-    padding-top: 44px;
+    padding-top: 2.75rem;
     background: url('../../img/bg-pattern-mobile-nav.svg') bottom no-repeat $neutral-very-dark-violet;
     background-size: contain;
     height: calc(100vh - 85px);
     > a:nth-child(1) {
       margin-top: 0;
-    }
-    > a:nth-child(4) {
-      margin: 24px auto 0 auto;
-      width: 90%;
-      max-width: 370px;
     }
     &__show {
       display: block;
@@ -44,10 +40,9 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     display: block;
-    text-align: center;
     &:hover {
       border-bottom: 2px solid white;
     }
@@ -59,33 +54,64 @@
     height: 32px;
     cursor: pointer;
   }
+
+  &--mobile-menu-icon {
+    display: none;
+    &__active {
+      display: inline;
+    }
+  }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .header {
     &--menu {
-
+      width: 86%;
+      margin: 0 auto;
     }
     &--logo {
-      flex: 1;
-      order: 0;
+      margin: 1.75rem 0 1.75rem 4px;
     }
 
     &--menu-items {
       display: block;
       width: auto;
       height: auto;
-      background-color: white;
+      background: white;
+      margin-top: 2px;
+      padding-top: 0;
     }
 
     &--menu-item {
       display: inline-block;
-      width: auto;
+      color: $neutral-dark-grayish-violet;
+      border-bottom: 0;
+      margin-top: 0;
+      margin-right: 10px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      &:hover {
+        color: $primary-dark-violet;
+        border-bottom: 0;
+      }
     }
+
     &--mobile-menu-btn {
       display: none;
-      flex: 1;
-      order: 2;
+    }
+  }
+}
+
+@media (min-width: 730px) {
+  .header {
+    &--menu-items {
+      > a:nth-child(3) {
+        margin-right: 30px;
+      }
+    }
+
+    &--menu-item {
+      margin-right: 22px;
     }
   }
 }

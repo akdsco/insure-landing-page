@@ -1,18 +1,45 @@
 .btn {
   border-width: 2px;
   border-style: solid;
+  text-transform: uppercase;
+  text-decoration: none;
   padding: 11px;
 }
 
+.btn-menu {
+  color: white;
+  border-color: white;
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  width: 90%;
+  max-width: 370px;
+  margin: 24px auto 0 auto;
+  &:hover {
+    color: $neutral-very-dark-violet;
+    background-color: white;
+  }
+}
+
 .btn-primary {
+  padding: 9px 30px;
+  font-weight: 600;
+  font-size: 14px;
+  color: $neutral-very-dark-violet;
+  background-color: white;
   border-color: $neutral-very-dark-violet;
+  &:hover {
+    color: white;
+    background-color: $neutral-very-dark-violet;
+  }
 }
 
 .btn-secondary {
+  color: white;
   border-color: white;
-
   &:hover {
-    background-color: white;
     color: $neutral-very-dark-violet;
+    background-color: white;
   }
 }
