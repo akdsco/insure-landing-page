@@ -1,19 +1,28 @@
 .hero {
-  display: flex;
-  flex-direction: column;
+  &--flex {
+    display: flex;
+    flex-direction: column
+  }
 
   &--image {
     order: -1;
     background: url("../../img/image-intro-mobile.jpg") no-repeat center;
     height: 451px;
+    img {
+      display: none;
+    }
   }
   &--information {
-    background-color: $primary-dark-violet;
+    height: 500px;
+    background: url('../../img/bg-pattern-intro-left-mobile.svg') no-repeat,
+                right 350px url('../../img/bg-pattern-intro-right-mobile.svg') no-repeat,
+                $primary-dark-violet;
     color: white;
     padding: 5.9rem 1.75rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
   }
   &--header {
@@ -22,16 +31,70 @@
     letter-spacing: 0;
     line-height: 1.16667;
     font-weight: 400;
+    max-width: 422.5px;
+  }
+  &--header-dash {
+    display: none;
   }
   &--text {
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 32px;
+    max-width: 391px;
   }
-  // redo it and implement for all buttons
   &--link {
-    width: 125px;
     margin: 0 auto;
-    padding: 7px 12px;
+  }
+}
+
+@media (min-width: 390px) {
+  .hero {
+    &--image {
+      background: url("../../img/image-intro-desktop.jpg") center 85% no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .hero {
+    background-color: $primary-dark-violet;
+    padding-top: 7rem;
+
+    &--flex {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &--header-dash {
+      display: block;
+      margin-bottom: 3rem;
+    }
+    &--information {
+      width: 50%;
+      padding: unset;
+      order: -1;
+      background: unset;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+    }
+    &--header {
+      margin-bottom: 27px;
+      font-size: 68px;
+      letter-spacing: 1px;
+      line-height: .9;
+      max-width: 96%;
+    }
+    &--text {
+      max-width: unset;
+    }
+    &--link {
+      margin: unset;
+    }
+    &--image {
+      img {
+        display: block;
+      }
+    }
   }
 }
