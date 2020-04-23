@@ -1,6 +1,9 @@
 .container {
+
+}
+
+.container-fixed {
   width: 86%;
-  max-width: $design-width-desktop;
   margin: 0 auto;
 }
 
@@ -11,5 +14,13 @@
 
   &__dark {
     border-color: $neutral-dark-grayish-violet;
+  }
+}
+
+@media (min-width: 850px) {
+  .container {
+    width: 86%;
+    max-width: $design-width-desktop;
+    margin: 0 auto;
   }
 }

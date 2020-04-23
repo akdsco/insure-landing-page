@@ -4,7 +4,6 @@ const menuBtn = document.getElementById('menu-btn');
 const menuItems = document.getElementById('menu-items');
 const mobileMenuIcons = document.getElementsByClassName('header--mobile-menu-icon');
 const specialMenuBtn = document.getElementById('special-menu-btn');
-const heroContainer = document.getElementById('hero-container');
 
 menuBtn.onclick = () => {
     menuItems.classList.toggle('header--menu-items__show');
@@ -19,13 +18,6 @@ window.onload = () => {
     if(specialMenuBtn.classList.contains('btn-menu')) {
       specialMenuBtn.classList.remove('btn-menu');
       specialMenuBtn.classList.add('btn-primary');
-    }
-  }
-
-  if(window.innerWidth <= 850) {
-    // render hero section without container class
-    if(heroContainer.classList.contains('container')) {
-      heroContainer.classList.remove('container');
     }
   }
 };
@@ -50,18 +42,6 @@ window.onresize = () => {
     if(specialMenuBtn.classList.contains('btn-primary')) {
       specialMenuBtn.classList.remove('btn-primary');
       specialMenuBtn.classList.add('btn-menu');
-    }
-  }
-
-  if(window.innerWidth >= 850) {
-    // render hero section with container class on desktop
-    if(!heroContainer.classList.contains('container')) {
-      heroContainer.classList.add('container');
-    }
-  } else {
-    // render hero section without container class on tablet and smaller devices
-    if(heroContainer.classList.contains('container')) {
-      heroContainer.classList.remove('container');
     }
   }
 };
