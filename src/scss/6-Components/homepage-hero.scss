@@ -1,7 +1,49 @@
+//TODO you can implement better Tablet responsiveness, eg. make the bg-right-desktop adjust it's size?
+
 .hero {
+
   &--flex {
     display: flex;
     flex-direction: column
+  }
+  &--information {
+    height: 500px;
+    background: url('../../img/bg-pattern-intro-left-mobile.svg') no-repeat, $primary-dark-violet;
+    color: white;
+    padding: 4.3rem 2.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &--header-dash {
+    display: none;
+  }
+  &--header {
+    margin-bottom: .8125rem;
+    font-size: 2.875rem;
+    letter-spacing: 0;
+    line-height: 1.16667;
+    font-weight: 400;
+    max-width: 422.5px;
+  }
+  &--text {
+    font-size: 1rem;
+    line-height: 26px;
+    margin-bottom: 2rem;
+    max-width: 391px;
+  }
+  &--link {
+    margin: 0 auto;
+  }
+  &--bg-right-bottom-mobile {
+    position: absolute;
+    right: 0;
+    top: 882px;
+  }
+  &--bg-left-desktop {
+    display: none;
   }
 
   &--image {
@@ -12,39 +54,7 @@
       display: none;
     }
   }
-  &--information {
-    height: 500px;
-    background: url('../../img/bg-pattern-intro-left-mobile.svg') no-repeat,
-                right 350px url('../../img/bg-pattern-intro-right-mobile.svg') no-repeat,
-                $primary-dark-violet;
-    color: white;
-    padding: 5.9rem 1.75rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  &--header {
-    margin-bottom: 13px;
-    font-size: 46px;
-    letter-spacing: 0;
-    line-height: 1.16667;
-    font-weight: 400;
-    max-width: 422.5px;
-  }
-  &--header-dash {
-    display: none;
-  }
-  &--text {
-    font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 32px;
-    max-width: 391px;
-  }
-  &--link {
-    margin: 0 auto;
-  }
+
 }
 
 @media (min-width: 390px) {
@@ -58,29 +68,30 @@
 
 @media (min-width: 850px) {
   .hero {
-    background-color: $primary-dark-violet;
+    background: $primary-dark-violet;
     padding-top: 7rem;
 
     &--flex {
       flex-direction: row;
       justify-content: space-between;
     }
-    &--header-dash {
-      display: block;
-      margin-bottom: 3rem;
-    }
     &--information {
       width: 50%;
       padding: unset;
+      padding-right: .9rem;
       order: -1;
       background: unset;
       justify-content: flex-start;
       align-items: flex-start;
       text-align: left;
     }
+    &--header-dash {
+      display: block;
+      margin-bottom: 3rem;
+    }
     &--header {
-      margin-bottom: 27px;
-      font-size: 68px;
+      margin-bottom: 1.6875rem;
+      font-size: 3.125rem;
       letter-spacing: 1px;
       line-height: .9;
       max-width: 96%;
@@ -91,10 +102,37 @@
     &--link {
       margin: unset;
     }
+    &--bg-right-bottom-mobile {
+      display: none;
+    }
+    &--bg-left-desktop {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 510px;
+    }
+
     &--image {
       img {
         display: block;
       }
+    }
+    &--bg-right-desktop {
+      height: 514px;
+      width: 436px;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      background: right -79px url('../../img/bg-pattern-intro-right-desktop.svg') no-repeat;
+    }
+
+  }
+}
+
+@media (min-width: 1260px) {
+  .hero {
+    &--header {
+      font-size: 4.25rem;
     }
   }
 }
