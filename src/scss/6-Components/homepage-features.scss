@@ -1,0 +1,49 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 9.2rem;
+  margin-bottom: 5rem;
+
+  &--header-container {
+    margin-bottom: 3.4rem;
+  }
+  &--dash {
+    margin: 0 auto;
+  }
+  &--header {
+    margin-top: 1rem;
+    font-size: 3rem;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  &--card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &--card {
+    height: 305px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  &--card-icon {
+
+  }
+  &--card-header {
+    margin-top: 1.9rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  &--card-text {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 2.3rem;
+    max-width: 390px;
+    line-height: 1.8;
+  }
+}
