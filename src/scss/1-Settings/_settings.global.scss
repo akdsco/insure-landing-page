@@ -7,6 +7,8 @@
 
 // Breakpoints
 
+$mobile-bp: 650px;
+$desktop-bp: 850px;
 $design-width-mobile: 375px;
 $design-width-desktop: 1100px;
 
@@ -25,9 +27,3 @@ $heading-font: 'DM Serif Display', serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 $main-font: 'Karla', sans-serif;
-
-// Standardise some UI treatments.
-// e.g.
-
-$global-radius: 3px !default;
-$global-transition: all 300ms ease-in-out !default;

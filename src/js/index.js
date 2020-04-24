@@ -1,5 +1,3 @@
-console.log('JS loaded..');
-
 const menuBtn = document.getElementById('menu-btn');
 const menuItems = document.getElementById('menu-items');
 const mobileMenuIcons = document.getElementsByClassName('header--mobile-menu-icon');
@@ -23,7 +21,7 @@ window.onload = () => {
 };
 
 window.onresize = () => {
-  // automatically close open mobile menu if user switches window size to tablet or higher
+  // close open mobile menu if user switches window size to tablet or higher
   if(window.innerWidth >= 650) {
     if(menuItems.classList.contains('header--menu-items__show')) {
       menuItems.classList.toggle('header--menu-items__show');

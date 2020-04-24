@@ -8,7 +8,6 @@
     align-items: center;
     max-width: $design-width-desktop;
   }
-
   &--logo {
     margin: 1.75rem 1.75rem 1.75rem 7%;
     order: 1;
@@ -17,7 +16,6 @@
       top: 2px;
     }
   }
-
   &--menu-items {
     width: 100%;
     order: 2;
@@ -33,7 +31,6 @@
       display: block;
     }
   }
-
   &--menu-item {
     color: white;
     margin: 32px auto 0;
@@ -49,23 +46,41 @@
       border-bottom: 2px solid white;
     }
   }
-
   &--mobile-menu-btn {
     order: 1;
     margin: 1.75rem;
     height: 32px;
     cursor: pointer;
   }
-
   &--mobile-menu-icon {
     display: none;
+
     &__active {
       display: inline;
     }
+    &:hover {
+      .header {
+        &--mobile-menu-btn-svg {
+          fill: $neutral-very-dark-violet;
+        }
+
+        &--mobile-menu-btn-svg-inner-line {
+          fill: white;
+        }
+      }
+    }
+  }
+  &--mobile-menu-btn-svg {
+    fill: white;
+    transition: fill .3s;
+  }
+  &--mobile-menu-btn-svg-inner-line {
+    fill: $neutral-very-dark-violet;
+    transition: fill .3s;
   }
 }
 
-@media (min-width: 650px) {
+@media (min-width: $mobile-bp) {
   .header {
     &--menu {
       width: 86%;
@@ -74,7 +89,6 @@
     &--logo {
       margin: 1.75rem 0 1.75rem 0;
     }
-
     &--menu-items {
       display: block;
       width: auto;
@@ -83,7 +97,6 @@
       margin-top: 2px;
       padding-top: 0;
     }
-
     &--menu-item {
       display: inline-block;
       color: $neutral-dark-grayish-violet;
@@ -92,12 +105,12 @@
       margin-right: 10px;
       font-size: 14px;
       letter-spacing: 1px;
+      transition: color .3s;
       &:hover {
         color: $primary-dark-violet;
         border-bottom: 0;
       }
     }
-
     &--mobile-menu-btn {
       display: none;
     }
@@ -111,7 +124,6 @@
         margin-right: 30px;
       }
     }
-
     &--menu-item {
       margin-right: 22px;
     }

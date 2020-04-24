@@ -13,7 +13,16 @@
     display: flex;
     width: 148px;
     justify-content: space-between;
+    align-items: center;
     margin-top: 1.5rem;
+    a {
+      fill: $neutral-dark-grayish-violet;
+      transition: fill .5s;
+
+      &:hover {
+        fill: $primary-dark-violet;
+      }
+    }
   }
   &--line-break {
     margin-top: 2.8rem;
@@ -59,8 +68,43 @@
   &--credits-link {
     text-decoration: none;
     color: $primary-dark-violet;
+
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+@media (min-width: 390px) {
+  .footer {
+    background: url("../../img/bg-pattern-footer-desktop.svg") no-repeat $neutral-very-light-gray;
+  }
+}
+@media (min-width: $desktop-bp) {
+  .footer {
+
+    &--logo-section {
+      padding-top: 4.2rem;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &--logo {
+      margin: unset;
+    }
+    &--social-links {
+      margin: unset;
+    }
+    &--line-break {
+      margin-top: 1.8rem;
+    }
+    &--links-section {
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 3.1rem 0;
+    }
+    &--column {
+      width: 25%;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
   }
 }

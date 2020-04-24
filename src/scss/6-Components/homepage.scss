@@ -1,5 +1,5 @@
 .container {
-
+  // no need to contain for small devices
 }
 
 .container-fixed {
@@ -21,10 +21,11 @@
 .full-br {
   border-top: 1px solid $neutral-dark-grayish-violet;
   width: 86%;
+  max-width: $design-width-desktop;
   margin: 0 auto;
 }
 
-@media (min-width: 850px) {
+@media (min-width: $desktop-bp) {
   .container {
     width: 86%;
     max-width: $design-width-desktop;
