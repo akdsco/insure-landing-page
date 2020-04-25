@@ -3,11 +3,12 @@
 
 ##### Description
 
-Implementation of homepage design for an insurance company.
+Implementation of homepage design for an insurance company. Created from scratch without 
+the use of any framework or library. Pure HTML5, CSS3, JS.
 
 ##### Stack
-- HTML
-- CSS ([Flexbox](https://geddski.teachable.com/p/flexbox-zombies), SCSS)
+- HTML5
+- CSS3 ([Flexbox](https://geddski.teachable.com/p/flexbox-zombies), SCSS)
 - JS
 
 ##### Built with
