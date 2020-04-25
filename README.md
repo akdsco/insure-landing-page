@@ -1,17 +1,22 @@
 
-## Name of the Project here
+## Insure Landing Page
 
 ##### Description
 
-Description goes here.
+Implementation of homepage design for an insurance company.
 
 ##### Stack
-- Stack 
-- is
-- here
+- HTML
+- CSS ([Flexbox](https://geddski.teachable.com/p/flexbox-zombies), SCSS)
+- JS
+
+##### Built with
+ - [gulp](https://www.npmjs.com/package/gulp)
+ - [gulp-babel](https://www.npmjs.com/package/gulp-babel)
+ - [browser-sync](https://www.npmjs.com/package/browser-sync)
+ - [node-sass](https://www.npmjs.com/package/node-sass)
 
 ##### Installation
-
 1) fork / copy project
 2) open console and `cd` into root directory
 3) run `npm i` and wait for the installation to finish
@@ -28,5 +33,4 @@ watches for changes in files, if change occurs in any souce file it automaticall
 updates and refreshes your local server
 
 ##### Live
-
-Check out live page [here]().
+Check out live page [here](https://akdsco.github.io/insure-landing-page/).
